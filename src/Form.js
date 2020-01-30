@@ -28,6 +28,12 @@ class Form extends React.Component {
     })
   }
 
+  handleNumberChange = e => {
+    this.setState({
+      number: e.target.value
+    })
+  }
+
 
   render() {
     return (
@@ -52,7 +58,7 @@ class Form extends React.Component {
         <br />
         <label>
           How many times you were in this city?
-   <select value={this.state.number}>
+   <select value={this.state.number} onChange={this.handleNumberChange}>
             <option value='0'>0</option>
             <option value='1'>1</option>
             <option value='2'>2</option>
